@@ -402,9 +402,27 @@ h6,
   color: #343a40;
 }
 
+.sp {
+  display: none;
+}
+@media print, screen and (max-width: 768px) {
+ .pc {
+  display: none;
+ }
+ .sp {
+  display: block;
+}
+}
 h1,
 .h1 {
   font-size: 6rem;
+  line-height: 1.5;
+}
+@media print, screen and (max-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 4rem;
+  }
 }
 
 h2,
@@ -10465,6 +10483,12 @@ p.lead {
   font-size: 1.5rem;
 }
 
+@media print, screen and (max-width: 768px) {
+  .subheading {
+    font-size: 1.3rem;
+  }
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
@@ -10540,19 +10564,16 @@ section.resume-section {
   border-bottom: 1px solid #bbb;
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 1rem;
   max-width: 75rem;
 }
 section.resume-section .resume-section-content {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   section.resume-section {
-    /* min-height: 100vh; */
+    padding: 3rem 1rem;
   }
 }
 @media (min-width: 992px) {
@@ -10572,6 +10593,12 @@ section.resume-section .resume-section-content {
   display: inline-block;
   margin-right: 10px;
   color: var(--blue);
+  text-indent: 0;
+}
+
+.address-box ul li {
+  padding-left: 25px;
+  text-indent: -25px;
 }
 
 h2 {
